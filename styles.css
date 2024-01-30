@@ -249,12 +249,12 @@ section .wave.wave4 {
         flex-direction: row;
     }
     .pulo {
-        top: 350px;
+        top: 150px;
         width: 200px;
     }
     .logo {
-        top: 400px;
-        scale: 2;
+        top: 300px;
+        scale: 1.5;
     }
 }
 
