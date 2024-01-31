@@ -60,7 +60,7 @@ const wave4 = document.querySelector(".wave4");
 
 
 buttonL.addEventListener("click", () => {
-    body.style.backgroundImage = "url('./Styles/luzonbg.webp')";
+    body.style.backgroundImage = "url('./Styles/luzonBG.webp')";
     body.style.backgroundSize = "cover";
     buttonL.style.filter = "blur(0)";
     buttonL.style.filter = "grayscale(0)";
