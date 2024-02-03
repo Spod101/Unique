@@ -161,7 +161,7 @@ section .wave.wave4 {
     color: whitesmoke;
     cursor: pointer;
     transition: transform 0.4s ease-in-out;
-    filter: blur(2px) grayscale(80%);
+        filter: blur(2px) grayscale(80%);
 }  
 
 .pulo:hover {
