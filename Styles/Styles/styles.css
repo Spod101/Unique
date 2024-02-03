@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(sky.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    cursor: grab;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;   
+    overflow: hidden;
+}
+
+section .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.webp);
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+    background-size: 1000px 100px;
+}
+
+section .wave.wave1 {
+    animation: animate 20s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+section .wave.wave2 {
+    animation: animate2 20s linear infinite;
+    z-index: 999;
+    opacity: .5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+section .wave.wave3 {
+    animation: animate3 30s linear infinite;
+    z-index: 998;
+    opacity: .2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+section .wave.wave4 {
+    animation: animate4 5s linear infinite;
+    z-index: 997;
+    opacity: .7;
+    animation-delay: -5s;
+    bottom: 30px;
+}
+
+.logo {
+    top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease-in-out;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 100px rgb(248, 255, 55));
+}
+
+/* Wave animation */
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate4 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+/* Mouse Animation */
+
+.trail
+{
+    position: absolute;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    opacity: 1;
+}
+
+@keyframes trail
+{
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+}
+
+/* Islands */
+.btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pulo {
+    top: 100px;
+    position: relative;
+    display: flex;
+    margin: 10px;
+    padding: 1.5rem;
+    height: 10%;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-size: cover;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+        filter: blur(2px) grayscale(80%);
+}  
+
+.pulo:hover {
+    box-shadow: 0 -5px 5px rgba(24, 109, 11, 0.8);
+    transform: scale(1.1);
+    filter: blur(0px) grayscale(0%);
+}
+
+.pulo:active {
+    transform: scale(0.9);
+}
+
+.l {
+    background-image: url('Luzon.webp');
+    background-size: cover;
+}
+
+.v {
+    background-image: url('Visayas.webp');
+    background-size: cover;
+}
+
+.m {
+    background-image: url('mindanao.webp');
+    background-size: cover;
+}
+
+@media screen and (max-width: 1366px) {
+    .btn {
+        flex-direction: column;
+        width: 100%;
+    }
+    .logo {
+        scale: 0.9;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .btn {
+        flex-direction: column;
+        width: 100%;
+        top: 400px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .btn {
+        flex-direction: column;
+    }
+    .pulo {
+        width: 200px;
+    }
+    .logo {
+        top: 100px;
+        scale: 0.6;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .btn {
+        top: 200px;
+        flex-direction: row;
+    }
+    .pulo {
+        width: 200px;
+    }
+    .logo {
+        top: 300px;
+        scale: 1;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .btn {
+        top: 200px;
+        flex-direction: row;
+    }
+    .pulo {
+        top: 100px;
+        width: 200px;
+    }
+    .logo {
+        top: 280px;
+        scale: 1;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .btn {
+        top: 200px;
+        flex-direction: row;
+    }
+    .pulo {
+        top: 150px;
+        width: 200px;
+    }
+    .logo {
+        top: 300px;
+        scale: 1.5;
+    }
+}
+
